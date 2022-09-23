@@ -1,4 +1,4 @@
-import React, { memo,useCallback,useEffect, useState } from 'react'
+import React, { memo,useEffect } from 'react'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 import HomeBanner from './c-cpns/home-banner'
 import HomeSectionV1 from './c-cpns/home-section-v1'
@@ -20,7 +20,7 @@ const Home = memo(() => {
     plusInfo:state.home.plusInfo,
     longforInfo:state.home.longforInfo,
   }), shallowEqual)
-  // console.log(discountInfo)
+  
 
   const dispatch = useDispatch()
   useEffect(()=>{
@@ -29,7 +29,7 @@ const Home = memo(() => {
 
 
   
-  // console.log(goodPriceInfo)
+  
   return (
     <>
     <HomeWrapper>

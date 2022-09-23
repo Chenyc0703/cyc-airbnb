@@ -1,12 +1,14 @@
 import {
   CURRENT_PAGE,
   TOTAL_COUNT,
-  ENTIRE_LIST} from './constants.js'
+  ENTIRE_LIST,
+  IS_LOADING} from './constants.js'
 
 const initialState = {
   currentPage: 0,
   totalCount:0,
-  entireList:[]
+  entireList:[],
+  isLoading:false
 }
 
 function reducer(state = initialState, action) {
@@ -18,6 +20,8 @@ function reducer(state = initialState, action) {
       return {...state, totalCount:action.data}
     case ENTIRE_LIST : 
       return {...state, entireList:action.data}
+    case IS_LOADING : 
+      return {...state, isLoading:action.data}
     default:
       return state
   }

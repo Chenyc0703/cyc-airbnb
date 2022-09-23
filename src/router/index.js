@@ -2,11 +2,12 @@ import { Navigate } from "react-router-dom"
 import Home from '@/views/home'
 import Detail from '@/views/detail'
 import Entire from '@/views/entire'
+import Demo from '@/views/demo'
 
  const routes = [
   {
     path:'/',
-    element: <Navigate to="/entire"/>
+    element: <Navigate to="/home"/>
   },
   {
     path:'home',
@@ -19,6 +20,10 @@ import Entire from '@/views/entire'
   {
     path:'entire',
     element:<Entire/>
+  },
+  {
+    path:'demo',
+    element:<Demo/>
   }
 ]
 
