@@ -13,6 +13,11 @@ export const EntireFilterWrapper = styled.div`
     /* display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox; */
+    position:fixed;
+    top:78px;
+    left: 0;
+    right: 0;
+    z-index: 99;
     display: flex;
     align-items: center;
     height: 48px;

@@ -9,6 +9,7 @@ import {HomeWrapper} from './style'
 import { isEmptyO } from '@/utils'
 // 请求
 import { fetchHomeDataAction } from '@/store/home' 
+import { changeHeaderConfigAction } from '@/store/main'
 
 const Home = memo(() => {
 
@@ -25,6 +26,7 @@ const Home = memo(() => {
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(fetchHomeDataAction())
+    dispatch(changeHeaderConfigAction({ isFixed: true, topAlpha: true }))
   },[dispatch])
 
 

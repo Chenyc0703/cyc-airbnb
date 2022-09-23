@@ -7,7 +7,7 @@ import EntireRooms from './c-cpns/entire-rooms'
 import FilterData from '@/assets/data/filter_data.json'
 import { fetchRoomsListAction } from '@/store/entire/createActions'
 import { useDispatch, useSelector } from 'react-redux'
-
+import { changeHeaderConfigAction } from '@/store/main'
 
 const Entire = memo(() => {
 
@@ -21,7 +21,8 @@ const Entire = memo(() => {
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(fetchRoomsListAction())
-    console.log(entireList)
+    dispatch(changeHeaderConfigAction({ isFixed: true, topAlpha: false }))
+    // console.log(entireList)
   },[])
 
 
